@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <title>cake Order</title>
+    <style>
+        .wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+ margin:100px 100px 100px 400px;
+}
+.one {
+  grid-column: 1;
+  grid-row: 1;
+}
+.two {
+  grid-column: 2 ;
+  grid-row: 1 ;
+}
+.three {
+  grid-column: 3;
+  grid-row: 1 ;
+}
+.four {
+  grid-column: 1;
+  grid-row: 2;
+}
+.five {
+  grid-column: 2;
+  grid-row: 2;
+}
+.six {
+  grid-column: 3;
+  grid-row: 2;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+ margin:100px 100px 100px 100px;
+}
+.div {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+ padding: 50px 0;
+ font-size: 20px;
+} 
+form{
+    font-size: 30px;
+    text-align: center;
+}
+.style{
+    padding: 10px;
+    background-color: lavender;
+}
+button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align: center; color: pink;">Cake Order</h2>
+    <form>
+    <label>Select the option</label> 
+    <select name="dog-names" id="dog-names" class="style"> 
+        <option >option 1</option> 
+        <option >option 2</option> 
+        <option >option 3</option> 
+        <option >option 4</option> 
+        <option >option 5</option>
+        <option >option 6</option>
+    </select><br>
+    <label>Enter the kg:</label>
+    <input type="text" name="address" size="50" />
+    <pre><a href="payment.html"><button type="submit" form="form1" value="Submit">Submit</button></a></pre>
+    </form>
+    <div class="wrapper" >
+        <div class="one div" >
+            <img src="https://5.imimg.com/data5/NI/IH/QU/ANDROID-90366522/img-20190619-153251-jpg-500x500.jpg" alt="stage1" width="125%" height="125%" >
+            <figcaption>1.Rs.700 per kg</figcaption>
+        </div>
+        <div class="two div" >
+            <img src="https://media.bakingo.com/sq-fresh-fruit-cake0014frui-AA.jpg?tr=h-265,w-265" alt="stage2" width="125%" height="125%">
+            <figcaption>2.Rs.900 per kg</figcaption>
+        </div>
+        <div class="three div">
+            <img src="https://liliyum.com/cdn/shop/products/Floralwifesbirthdaycake_2400x.jpg?v=1630924842" width="125%" height="125%">
+            <figcaption>3.Rs.1000 per kg</figcaption>
+        </div>
+        <div class="four div" >
+            <img src="https://imgcdn.floweraura.com/yummy-creamy-treat-A.jpg" width="125%" height="125%">
+            <figcaption>4.Rs.500 per kg</figcaption>
+        </div>
+        <div class="five div" >
+            <img src="https://media.bakingo.com/sq-fresh-fruit-cake0014frui-AA.jpg?tr=h-265,w-265" width="125%" height="125%">
+           <figcaption>5.Rs.650 per kg</figcaption>
+        </div>
+        <div class="six div" >
+            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/rainbow_cake_20402_16x9.jpg" width="125%" height="125%">
+            <figcaption>6.Rs.1500 per kg</figcaption>
+        </div>
+      </div>
+</body>
+
+</html>

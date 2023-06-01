@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 4px;
+            background-image: url("pattern.png");
+            animation-name: backgroundAnimation;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background-position: 0 0; }
+            50% { background-position: 100% 0; }
+            100% { background-position: 0 0; }
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .error-animation {
+            animation-name: shake;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: 3;
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-10px); }
+            100% { transform: translateX(0); }
+        }
+        body{
+            background-image: url('https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/image/rDtN98Qoishumwih/summer-background-abstract-background-wallpaper-use-for-presentation_HDDYoJOhMg_thumb.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+    <script type="text/javascript">
+        function validateForm() {
+            var firstName = document.forms["myForm"]["fname"].value;
+            var email = document.forms["myForm"]["email"].value;
+            var phoneNumber = document.forms["myForm"]["phone"].value;
+            var zipCode = document.forms["myForm"]["zip"].value;
+            var address = document.forms["myForm"]["address"].value;
+            var city = document.forms["myForm"]["city"].value;
+
+            var nameRegex = /^[a-zA-Z]+$/;
+            var emailRegex = /^\S+@\S+\.\S+$/;
+            var phoneRegex = /^\d{10}$/;
+            var zipRegex = /^\d{5}$/;
+            var addressRegex = /^[a-zA-Z0-9\s,'-]*$/;
+            var cityRegex = /^[a-zA-Z\s]+$/;
+
+            var errors = [];
+
+            if (!nameRegex.test(firstName)) {
+                errors.push("First name must contain only letters");
+            }
+
+            if (!emailRegex.test(email)) {
+                errors.push("Invalid email format");
+            }
+
+            if (!phoneRegex.test(phoneNumber)) {
+                errors.push("Invalid phone number format");
+            }
+
+            if (!zipRegex.test(zipCode)) {
+                errors.push("Invalid zip code format");
+            }
+
+            if (!addressRegex.test(address)) {
+                errors.push("Invalid address format");
+            }
+
+
+            if (!cityRegex.test(city)) {
+                errors.push("Invalid city format");
+            }
+
+            if (errors.length > 0) {
+                var errorText = "Please fix the following errors:\n\n";
+                for (var i = 0; i < errors.length; i++) {
+                    errorText += "- " + errors[i] + "\n";
+                }
+                alert(errorText);
+                document.forms["myForm"].classList.add("error-animation");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Enter the Deatils</h1>
+    <form name="myForm" onsubmit="return validateForm()">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+
+        <label for="edate">Event date:</label>
+        <input type="date" id="edate" name="edate"><br><br>
+ 
+        <label for="event">Select the Event:</label>
+       <select name="event" id="event">
+       <option value="Wedding">Wedding</option>
+       <option value="Housewarming">Housewarming</option>
+       <option value="Engagement">Engagement</option>
+       <option value="Birthday Party">Birthday Party</option>
+      </select><br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone"><br><br>
+        
+        <label for="zip">Zip Code:</label>
+        <input type="text" id="zip" name="zip"><br><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address"></textarea><br><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city"><br><br>
+
+        
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

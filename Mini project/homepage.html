@@ -1,0 +1,253 @@
+<html>
+<head>
+<title>event arrangement</title>
+<style>
+img {
+  text-align: center;
+  overflow: hidden;
+  height: 510px;
+  width: 728px;
+  margin: 0 auto;
+}
+body{
+background-image:
+url('image.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+ margin:100px 100px 100px 400px;
+}
+.one {
+  grid-column: 1;
+  grid-row: 1;
+}
+.two {
+  grid-column: 2 ;
+  grid-row: 1 ;
+}
+.three {
+  grid-column: 1;
+  grid-row: 2 ;
+}
+.four {
+  grid-column: 2;
+  grid-row: 2;
+}
+.div {
+  width: 300px;
+  height: 100px;
+  border: 1px solid white;
+  background-color: HoneyDew;
+  border-radius: 25px;
+  text-align: center;
+  padding: 5px 0;
+ font-size: 30px;
+} 
+*{
+font-family: Arial;
+font-size: 30px;
+text-align: center;
+}
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 150px;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: CornSilk;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+button {
+  animation: wiggle 2s linear infinite;
+}
+button {   
+       background-color: Lavender;   
+       width: 10%;  
+        color: Peru;   
+        padding: 15px;   
+        margin: 10px 40px 10px 10px;   
+        border: none;   
+        cursor: pointer;
+        border-radius: 25px;  
+        float: right; 
+         } 
+         .button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      align: center;
+      border-radius: 10px;
+      cursor: pointer;
+    } 
+</style>
+</head>
+<body>
+<h1 style="color:Indigo; margin:50px;  font-style: italic;" class="animate-charcter">LIFE EVENTS</h1> 
+<a href="sign in.html">
+<button type="button" class="cancelbtn">Sign in</button> 
+</a>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="https://cdn0.weddingwire.in/article/0460/3_2/960/jpg/110640-wedding-planning-checklist-soulmate-films-official.jpeg" style="width:75%">
+  <div class="text">Wedding</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="https://hiibangalore.com/wp-content/uploads/photo-gallery/thumb/House_warming_flower_decorators_Bangalore.jpg?bwg=1600887822" style="width:75%">
+  <div class="text">House warming</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="https://b2806045.smushcdn.com/2806045/wp-content/uploads/2015/01/bride-and-groom-wedding-rings.jpg?lossy=1&strip=1&webp=1" style="width:75%">
+  <div class="text">Engagement</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="https://cdn.cdnparenting.com/articles/2018/04/407263582-H-1024x700.webp" style="width:75%">
+  <div class="text">Birthday party</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+</div>
+<div class="wrapper" >
+    <div class="one div">
+  <a href="wedding.html"> 
+    WEDDING</a>
+  </div>
+  <div class="two div" >
+    <a href="birthday party.html"> BIRTHDAY PARTY</a>
+  </div>
+  <div class="three div">
+    <a href="Engagement.html"> ENGAGEMENT</a>
+  </div> 
+  <div class="four div" >
+    <a href="House warming.html">HOUSEWARMING</a>
+  </div>
+</div>
+<div>
+  <a href="Details.html">
+ <button type="submit" form="form1" class="button" onclick="" value="Submit">Fill the form</button>
+ </a>
+</div>
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>
